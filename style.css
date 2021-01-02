@@ -1,7 +1,7 @@
 body{
     font-family: -apple-system,BlinkMacSystemFont,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 
-    line-height: 1.3;
+    line-height: 2;
 
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@ body{
     margin:0;
     border:0;
 
-
+    background-color:rgb(216, 214, 219);
     /* Variable definition */ 
     --theme-base-purple: rgba(82, 7, 88, 0.966);
     --theme-font-color:black;
@@ -20,7 +20,14 @@ body{
 
 }
 
+main{
+  color:var(--font-color);
+  background-color:rgb(240, 239, 239);
 
+  margin: 0 13vw 0 13vw;
+  padding: 10vh 5vw 0vw 5vw;
+  
+}
 
 header {
     top:0;
@@ -32,7 +39,7 @@ header {
     font-size: 1.6rem;
     font-weight: 600;
     border-bottom: 5px solid var(--theme-base-purple);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color:rgb(240, 239, 239, 0.9);
     display: flex;
     flex-direction: row;
     align-items:center ;
@@ -99,7 +106,7 @@ a:hover{
 
     visibility: hidden;
     font-size:1rem;
-    line-height: 1.1;
+    line-height: 1.5;
 
     background-color: rgba(0, 0, 0, 0.769);
     color: rgb(255, 255, 255);
@@ -118,19 +125,13 @@ a:hover{
       margin: 2vw;
   }
 
-main{
-    color:var(--font-color);
-    background-color:var(--background-color);
 
-    padding: 10vh 10vw 0vw 10vw;
-    
-}
 li{
-  line-height: 150%;
+  line-height: 160%;
   font-size:1.2rem;
 }
 p{
-  line-height: 120%;
+  line-height: 150%;
   font-size:1.2rem;
 }
 span{
