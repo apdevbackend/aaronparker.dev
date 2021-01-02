@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>me@aaronparker.dev</title>
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <header class="header" role="banner"> 
+
+  <a class="mainTitle" href="" title="Aaron Parker">Aaron Parker</a>
+ 
+  <nav>
+    <a class="sectionLink" href="#About" title="About">About</a>
+    <a class="sectionLink" href="#Experience" title="Experience">Experience</a>
+    <a class="sectionLink" href="#Services" title="Services">Services</a>
+    <a class="sectionLink" href="#Contact" title="Contact">Contact</a>
+
+  </nav>
+</header>
+
+  <main class="content">
+
+    <div class="contentSection" id="About">
+      <h3 class="title">About</h3>
+      <p>
+      I'm a developer.
+       This is my portfolio website. 
+       I'm currently working on my web development skills, job hunting, and volunteering.  
+      </p>
+    </div>
+
+    <div class="contentSection" id="Experience">
+      
+      <h3 class="title">Experience</h3>
+      <p>
+       Check out some projects in my portfolio below.
+          <a href="resume.pdf"> <b>Read my resume.</b> </a>
+          <br>
+          For more details read the
+          <a href="./Story/story.html"><b>overall story of my experience with technology.</b></a>
+          <br>          <br>
+
+          Key points:
+
+     
+      </p>
+        <ul>
+          <li>Bachelors in computer science from Worcester State University, concentration in large scale data science.</li>
+          <li>Wide scope of skills: software, hardware, web development, data science, network engineering.</li>
+          <li>Multiple complete projects, software implemented in professional enviornments.</li>
+        </ul>
+
+
+
+      <div class="dropdown" id="dropdown">
+        <button >Portfolio Filters</button>
+
+        <div id="dropdownContent">
+   
+      <span v-for="item in tagsList">
+        <input type="checkbox" :value="item.tag" v-model="selectedTags"> <span class="checkbox-label"> {{item.tag}} </span> <br>
+      </span>
+      
+        </div> 
+      </div >
+
+      <div class="iconWrap">
+
+        <div v-for="item in tagsList" v-if="selectedTags.includes(item.tag)">
+          <a v-for="item in item.objects" target = "_self" :href='item.link'>
+            <div class="imgBox">
+              <span class="tooltipText"> {{ item.toolTip }} </span>
+              <img class="icon" :src= 'item.icon' width="100" height="60">
+            </div>
+          </a>
+
+        </div> 
+
+      </div> <!-- iconWrap-->
+
+      </div> <!--Experience -->
+
+
+  
+
+
+  <div class="contentSection" id="Services">
+    <h3 class="title">Services</h3>
+    <p>
+      I would love to make you a website or web application.
+      <br>
+      I make search and load optimized websites and applications built to modern standards.
+      <br><br>
+      I as well do software engineering, network engineering, data science, database engineering, hardware repair, and more.
+      <br><br>
+      <a href="mailto: me@aaronparker.dev"> <b>Contact me via email with your request.</b> </a>
+
+    </p>
+  </div>
+
+  <div class="contentSection" id="Contact">
+
+    <h3 class="title">Contact</h3>
+    <p>Ask me a question. I'd love to hear from you. 
+      <br> 
+      Send me an email.
+      <br> 
+       Let's build something awesome!
+       <br><br> 
+    <a href="mailto: me@aaronparker.dev"><b>me@aaronparker.dev</b></a>
+  </p>
+  </div>
+
+
+</main>
+
+</body>
+</html>
+<script>
+
+new Vue({
+  el: '#Experience',
+  data: {
+    showSkills: true,
+    tagsList:
+    [
+      { tag: 'Web Development', objects:[
+        {toolTip: 'Aaronparker.dev previous version - Vue JS', icon: '/Previous/About.PNG', link: './Previous/Previous.html'},
+        {toolTip: 'Strawberries & Cinnamon - Wordpress Woocommerce', icon: '/StrawberriesAndCinnamon/StrawberriesAndCinnamon.PNG', link: '/StrawberriesAndCinnamon/StrawberriesAndCinnamon.html'},
+      ]},
+
+      { tag: 'Data Science', objects:[
+        {toolTip: 'Pokemon Dataset Analysis - R, WEKA, Excel',  icon: '/PokemonDataMining/21.jpg', link:'/PokemonDataMining/PokemonDataMining.html'},
+      ]},
+
+      { tag: 'Software Engineering', objects:[
+        {toolTip: 'MLS2PubRec - "Extract, Transform, Load" JavaFX  software', icon: '/MLS2PubRec/MLS2PubRec.PNG', link: './MLS2PubRec/MLS2PubRec.html'},
+      ]},
+    ],
+
+    selectedTags: ['Web Development', 'Data Science', 'Software Engineering'] ,
+  },
+
+})
+
+
+</script>
+

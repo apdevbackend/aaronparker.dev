@@ -1,0 +1,170 @@
+body{
+    font-family: -apple-system,BlinkMacSystemFont,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+
+    line-height: 1.3;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    
+    margin:0;
+    border:0;
+
+
+    /* Variable definition */ 
+    --theme-base-purple: rgba(82, 7, 88, 0.966);
+    --theme-font-color:black;
+    --theme-background-color: white;
+
+
+}
+
+
+
+header {
+    top:0;
+    height: 8vh;
+    width:100vw;
+    position: fixed;
+
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 5px solid var(--theme-base-purple);
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-between;
+    color:var(--theme-color);
+
+    z-index: 7; 
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.sectionLink{
+ padding:2vw;
+ color: rgb(19, 19, 19)
+}
+
+.mainTitle{
+  font-size: 1.7rem;
+
+    padding-left: 3vw;
+    color: rgb(0, 0, 0);
+}
+.title{
+    font-size:1.4rem;
+    color: rgb(0, 0, 0);
+    width:75vw;
+    font-weight: 500;
+    border-bottom: 2px double var(--theme-base-purple);
+
+}
+
+.iconWrap{
+
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.icon{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    outline: 1px solid rgba(0, 0, 0, 0.158); ;
+}
+
+.imgBox{
+    margin: .5em;
+
+    width: 20vw;
+    height: 12vw;
+    box-sizing: border-box;
+    
+}
+
+.imgBox .tooltipText {
+
+    visibility: hidden;
+    font-size:1rem;
+    line-height: 1.1;
+
+    background-color: rgba(0, 0, 0, 0.769);
+    color: rgb(255, 255, 255);
+    width: 20vw;
+    text-align: center;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .imgBox:hover .tooltipText {
+    visibility: visible;
+  }
+
+  .checkbox{
+      margin: 2vw;
+  }
+
+main{
+    color:var(--font-color);
+    background-color:var(--background-color);
+
+    padding: 10vh 3vw 0vw 3vw;
+    
+}
+li{
+  line-height: 150%;
+  font-size:1.2rem;
+}
+p{
+  line-height: 120%;
+  font-size:1.2rem;
+}
+span{
+  font-size:1.2rem;
+}
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 80vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1.4em 1.6em;
+    z-index: 1;
+  }
+  .dropdown:hover #dropdownContent {
+    display: block;
+  }
+  
+
+
+  button{
+   padding-left: .8em;
+    padding-right: .8em;
+    background-color: rgb(231, 226, 235);
+    font-size: 1.4rem;
+    padding-top: .1em;
+    padding-bottom: .1em
+  }
